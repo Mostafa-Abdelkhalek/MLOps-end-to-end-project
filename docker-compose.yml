@@ -1,0 +1,25 @@
+version: "3"
+services:
+  pysparkapi:
+    build: pysparkapi/
+    image: pysparkapi/mostafaabdelkhalek8:v5
+    ports:
+      - 5000:4040
+    networks:
+      - ml-network 
+    container_name: pysparkapi-container 
+
+  streamlitapi: 
+    build: streamlitapi/
+    image: streamlitapi/mostafaabdelkhalek8:v5
+    ports:
+      - 8501:8501
+    networks:
+      - ml-network
+    depends_on:
+      - pysparkapi 
+    container_name: streamlitapi-container
+
+networks:
+  ml-network:
+    driver: bridge
