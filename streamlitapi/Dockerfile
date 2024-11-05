@@ -1,8 +1,8 @@
-FROM python:3.7-slim
-WORKDIR /streamlit
-COPY ./requirements.txt /streamlit/
-RUN pip install -r requirements.txt
-RUN apt-get update && apt-get install -y curl vim jq
-COPY ./webapp.py /streamlit/
+FROM python:3.7-slim 
+WORKDIR /app/
 EXPOSE 8501
-CMD ["streamlit","run","webapp.py"]
+COPY requirements.txt /app/
+RUN pip install -r requirements.txt
+COPY . /app/
+CMD ["streamlit","run","webapp.py"] 
+
