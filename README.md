@@ -75,5 +75,5 @@ The Streamlit UI is exposed via a LoadBalancer and can be accessed at the DNS na
 http://<LoadBalancer-DNS-name>:8501
 ```
 ## Conclusion
-This project demonstrates a comprehensive MLOps workflow integrating Docker, Kubernetes, and AWS services, from development through to a scalable production deployment.
+This project demonstrates a comprehensive MLOps workflow integrating Docker, Kubernetes, and AWS services, from development through to a scalable production deployment..
 
